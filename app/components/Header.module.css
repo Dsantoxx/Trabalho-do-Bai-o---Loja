@@ -1,11 +1,11 @@
 .header {
-  background-color: #1a1a2e;
+  background-color: #0a1a0a;
   color: #fff;
   padding: 1.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 3px solid #e94560;
+  border-bottom: 3px solid #4169E1;
 }
 
 .titulo {
@@ -15,6 +15,6 @@
 
 .subtitulo {
   font-size: 0.95rem;
-  color: #a0a0b0;
+  color: #a0b0a0;
   margin: 0;
 }

@@ -1,13 +1,13 @@
 .page {
-  --background: #fafafa;
-  --foreground: #fff;
+  --background: #0a1a0a;
+  --foreground: #0d1f0d;
 
-  --text-primary: #000;
-  --text-secondary: #666;
+  --text-primary: #fff;
+  --text-secondary: #a0b0a0;
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
+  --button-primary-hover: #1a3a1a;
+  --button-secondary-hover: #1a3a1a;
+  --button-secondary-border: #1a3a1a;
 
   display: flex;
   flex: 1;
@@ -58,7 +58,7 @@
 
 .intro a {
   font-weight: 500;
-  color: var(--text-primary);
+  color: #98FF98;
 }
 
 .ctas {
@@ -85,24 +85,24 @@
 }
 
 a.primary {
-  background: var(--text-primary);
-  color: var(--background);
+  background: #4169E1;
+  color: #fff;
   gap: 8px;
 }
 
 a.secondary {
-  border-color: var(--button-secondary-border);
+  border-color: #1a3a1a;
+  color: #98FF98;
 }
 
-/* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
-    background: var(--button-primary-hover);
+    background: #2a4fc1;
     border-color: transparent;
   }
 
   a.secondary:hover {
-    background: var(--button-secondary-hover);
+    background: #1a3a1a;
     border-color: transparent;
   }
 }
@@ -120,23 +120,5 @@ a.secondary {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -1.92px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-
-  .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
   }
 }

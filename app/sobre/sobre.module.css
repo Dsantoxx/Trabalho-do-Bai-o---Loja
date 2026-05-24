@@ -3,12 +3,14 @@
   margin: 0 auto;
   padding: 2rem 1.5rem;
   color: #fff;
+  background-color: #0a1a0a;
+  min-height: 100vh;
 }
 
 .hero {
   text-align: center;
   padding: 3rem 0 2rem;
-  border-bottom: 1px solid #0f3460;
+  border-bottom: 1px solid #1a3a1a;
   margin-bottom: 2.5rem;
 }
 
@@ -18,7 +20,7 @@
 }
 
 .descricao {
-  color: #a0a0b0;
+  color: #a0b0a0;
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto;
@@ -33,10 +35,10 @@
 }
 
 .card {
-  background-color: #16213e;
+  background-color: #0d1f0d;
   border-radius: 12px;
   padding: 1.5rem;
-  border: 1px solid #0f3460;
+  border: 1px solid #1a3a1a;
   text-align: center;
   transition: transform 0.2s;
 }
@@ -54,25 +56,25 @@
 .card h2 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
-  color: #e94560;
+  color: #98FF98;
 }
 
 .card p {
-  color: #a0a0b0;
+  color: #a0b0a0;
   font-size: 0.9rem;
   line-height: 1.6;
 }
 
 .info {
-  background-color: #16213e;
+  background-color: #0d1f0d;
   border-radius: 12px;
   padding: 2rem;
-  border: 1px solid #0f3460;
+  border: 1px solid #1a3a1a;
 }
 
 .info h2 {
   margin-bottom: 1rem;
-  color: #e94560;
+  color: #98FF98;
 }
 
 .lista {

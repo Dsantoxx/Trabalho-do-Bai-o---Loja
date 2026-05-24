@@ -3,11 +3,13 @@
   margin: 2rem auto;
   padding: 0 1.5rem;
   color: #fff;
+  background-color: #0a1a0a;
+  min-height: 100vh;
 }
 
 .voltar {
   display: inline-block;
-  color: #e94560;
+  color: #98FF98;
   text-decoration: none;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
@@ -21,10 +23,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  background-color: #16213e;
+  background-color: #0d1f0d;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #0f3460;
+  border: 1px solid #1a3a1a;
 }
 
 .imagem {
@@ -40,7 +42,7 @@
 .categoria {
   font-size: 0.75rem;
   text-transform: uppercase;
-  color: #e94560;
+  color: #98FF98;
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -51,7 +53,7 @@
 }
 
 .avaliacao {
-  color: #a0a0b0;
+  color: #a0b0a0;
 }
 
 .descricao {
@@ -62,19 +64,19 @@
 
 .preco {
   font-size: 2rem;
-  color: #e94560;
+  color: #98FF98;
   display: block;
   margin: 1rem 0;
 }
 
 .estoque {
-  color: #a0a0b0;
+  color: #a0b0a0;
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
 }
 
 .botao {
-  background-color: #e94560;
+  background-color: #4169E1;
   color: #fff;
   border: none;
   padding: 0.85rem 2rem;
@@ -85,5 +87,5 @@
 }
 
 .botao:hover {
-  background-color: #c73652;
+  background-color: #2a4fc1;
 }

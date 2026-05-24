@@ -1,18 +1,15 @@
-.botao {
-  padding: 0.5rem 1rem;
+.btn {
+  background: none;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.9rem;
-  background-color: #0f3460;
-  color: #fff;
+  font-size: 1.3rem;
+  padding: 0.25rem;
+  border-radius: 6px;
+  background-color: #1a3a1a;
   transition: background-color 0.2s;
 }
 
-.botao:hover {
-  background-color: #e94560;
-}
-
-.curtido {
-  background-color: #e94560;
+.btn:hover,
+.ativo {
+  background-color: #4169E1;
 }

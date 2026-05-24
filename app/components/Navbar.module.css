@@ -1,10 +1,10 @@
 .nav {
-  background-color: #1a1a2e;
+  background-color: #0a1a0a;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 3px solid #e94560;
+  border-bottom: 3px solid #4169E1;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -24,12 +24,12 @@
 }
 
 .link {
-  color: #a0a0b0;
+  color: #a0b0a0;
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.2s;
 }
 
 .link:hover {
-  color: #e94560;
+  color: #98FF98;
 }

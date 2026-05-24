@@ -1,8 +1,10 @@
 .container {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
   color: #fff;
+  background-color: #0a1a0a;
+  min-height: 100vh;
 }
 
 .titulo {
@@ -11,12 +13,6 @@
 }
 
 .subtitulo {
-  color: #a0a0b0;
+  color: #a0b0a0;
   margin-bottom: 2rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
 }
