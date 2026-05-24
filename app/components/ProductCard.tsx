@@ -1,9 +1,7 @@
-// app/components/ProductCard.tsx
-// Server Component — exibe os dados de um produto
-// LikeButton é Client Component e pode ser usado dentro de Server Components
-
 import Link from "next/link";
+import Image from "next/image";
 import LikeButton from "./LikeButton";
+import styles from "./ProductCard.module.css";
 
 type Produto = {
   id: string;
@@ -20,17 +18,25 @@ type ProductCardProps = {
 
 export default function ProductCard({ produto }: ProductCardProps) {
   return (
-    <div>
-      <img src={produto.imagem} alt={produto.nome} width={400} height={300} />
-      <div>
-        <span>{produto.categoria}</span>
-        <h2>{produto.nome}</h2>
-        <p>⭐ {produto.avaliacao}</p>
-        <strong>R$ {produto.preco.toFixed(2)}</strong>
+    <div className={styles.card}>
+      <img
+        className={styles.imagem}
+        src={produto.imagem}
+        alt={produto.nome}
+        width={400}
+        height={200}
+      />
+      <div className={styles.corpo}>
+        <span className={styles.categoria}>{produto.categoria}</span>
+        <h2 className={styles.nome}>{produto.nome}</h2>
+        <p className={styles.avaliacao}>⭐ {produto.avaliacao}</p>
+        <strong className={styles.preco}>R$ {produto.preco.toFixed(2)}</strong>
       </div>
-      <div>
+      <div className={styles.acoes}>
         <LikeButton produtoId={produto.id} />
-        <Link href={`/produto/${produto.id}`}>Ver detalhes →</Link>
+        <Link className={styles.link} href={`/produto/${produto.id}`}>
+          Ver detalhes →
+        </Link>
       </div>
     </div>
   );

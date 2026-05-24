@@ -1,9 +1,7 @@
-// app/components/LikeButton.tsx
-// Client Component — precisa de "use client" por usar useState
-
 "use client";
 
 import { useState } from "react";
+import styles from "./LikeButton.module.css";
 
 type LikeButtonProps = {
   produtoId: string;
@@ -12,12 +10,11 @@ type LikeButtonProps = {
 export default function LikeButton({ produtoId }: LikeButtonProps) {
   const [curtido, setCurtido] = useState(false);
 
-  function handleClick() {
-    setCurtido((prev) => !prev);
-  }
-
   return (
-    <button onClick={handleClick} aria-label="Curtir produto">
+    <button
+      onClick={() => setCurtido((prev) => !prev)}
+      className={`${styles.botao} ${curtido ? styles.curtido : ""}`}
+    >
       {curtido ? "❤️ Curtido" : "🤍 Curtir"}
     </button>
   );

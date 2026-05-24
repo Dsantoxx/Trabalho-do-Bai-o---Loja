@@ -1,5 +1,4 @@
-// app/components/Header.tsx
-// Server Component — exibe o cabeçalho estático da aplicação
+import styles from "./Header.module.css";
 
 type HeaderProps = {
   totalProdutos: number;
@@ -7,9 +6,9 @@ type HeaderProps = {
 
 export default function Header({ totalProdutos }: HeaderProps) {
   return (
-    <header>
-      <h1>🛍️ Catálogo Interativo</h1>
-      <p>{totalProdutos} produtos disponíveis</p>
+    <header className={styles.header}>
+      <h1 className={styles.titulo}>🛍️ Catálogo Interativo</h1>
+      <p className={styles.subtitulo}>{totalProdutos} produtos disponíveis</p>
     </header>
   );
 }

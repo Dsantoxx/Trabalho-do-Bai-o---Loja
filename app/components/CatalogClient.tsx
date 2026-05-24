@@ -1,11 +1,9 @@
-// app/components/CatalogClient.tsx
-// Client Component — gerencia o estado da busca e filtragem dos produtos
-
 "use client";
 
 import { useState } from "react";
 import SearchBar from "./SearchBar";
 import ProductCard from "./ProductCard";
+import styles from "./CatalogClient.module.css";
 
 type Produto = {
   id: string;
@@ -29,35 +27,29 @@ export default function CatalogClient({ produtos }: CatalogClientProps) {
   const categorias = ["Todas", ...new Set(produtos.map((p) => p.categoria))];
 
   const produtosFiltrados = produtos.filter((produto) => {
-    const bateNome = produto.nome
-      .toLowerCase()
-      .includes(termoBusca.toLowerCase());
-    const bateCategoria =
-      categoriaAtiva === "Todas" || produto.categoria === categoriaAtiva;
+    const bateNome = produto.nome.toLowerCase().includes(termoBusca.toLowerCase());
+    const bateCategoria = categoriaAtiva === "Todas" || produto.categoria === categoriaAtiva;
     return bateNome && bateCategoria;
   });
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <SearchBar onSearch={setTermoBusca} />
-
-      <div>
+      <div className={styles.filtros}>
         {categorias.map((cat) => (
           <button
             key={cat}
             onClick={() => setCategoriaAtiva(cat)}
-            style={{ fontWeight: categoriaAtiva === cat ? "bold" : "normal" }}
+            className={`${styles.filtroBotao} ${categoriaAtiva === cat ? styles.ativo : ""}`}
           >
             {cat}
           </button>
         ))}
       </div>
-
-      <p>{produtosFiltrados.length} produto(s) encontrado(s)</p>
-
-      <div>
+      <p className={styles.resultado}>{produtosFiltrados.length} produto(s) encontrado(s)</p>
+      <div className={styles.grid}>
         {produtosFiltrados.length === 0 ? (
-          <p>Nenhum produto encontrado para "{termoBusca}".</p>
+          <p className={styles.vazio}>Nenhum produto encontrado para "{termoBusca}".</p>
         ) : (
           produtosFiltrados.map((produto) => (
             <ProductCard key={produto.id} produto={produto} />

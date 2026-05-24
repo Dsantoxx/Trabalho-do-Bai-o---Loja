@@ -1,0 +1,47 @@
+.wrapper {
+  padding: 1.5rem 2rem;
+  background-color: #0f3460;
+  min-height: 100vh;
+}
+
+.filtros {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.filtroBotao {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #e94560;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s;
+}
+
+.filtroBotao:hover,
+.ativo {
+  background-color: #e94560;
+}
+
+.resultado {
+  color: #a0a0b0;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.vazio {
+  color: #a0a0b0;
+  text-align: center;
+  padding: 3rem;
+  grid-column: 1 / -1;
+}

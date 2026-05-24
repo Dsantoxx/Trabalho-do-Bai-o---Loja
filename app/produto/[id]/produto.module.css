@@ -1,0 +1,89 @@
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  color: #fff;
+}
+
+.voltar {
+  display: inline-block;
+  color: #e94560;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.voltar:hover {
+  text-decoration: underline;
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background-color: #16213e;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #0f3460;
+}
+
+.imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  padding: 2rem;
+}
+
+.categoria {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #e94560;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nome {
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+}
+
+.avaliacao {
+  color: #a0a0b0;
+}
+
+.descricao {
+  color: #c0c0d0;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.preco {
+  font-size: 2rem;
+  color: #e94560;
+  display: block;
+  margin: 1rem 0;
+}
+
+.estoque {
+  color: #a0a0b0;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.botao {
+  background-color: #e94560;
+  color: #fff;
+  border: none;
+  padding: 0.85rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botao:hover {
+  background-color: #c73652;
+}

@@ -1,0 +1,20 @@
+.header {
+  background-color: #1a1a2e;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid #e94560;
+}
+
+.titulo {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.subtitulo {
+  font-size: 0.95rem;
+  color: #a0a0b0;
+  margin: 0;
+}

@@ -1,9 +1,6 @@
-// app/produto/[id]/page.tsx
-// Server Component — página de detalhes de um produto específico
-// O Next.js captura o [id] da URL automaticamente via params
-
 import Link from "next/link";
 import { getProdutoPorId } from "../../../lib/produtos";
+import styles from "./produto.module.css";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -15,29 +12,34 @@ export default async function ProdutoPage({ params }: Props) {
 
   if (!produto) {
     return (
-      <main>
+      <main className={styles.container}>
         <h1>Produto não encontrado</h1>
-        <Link href="/">← Voltar ao catálogo</Link>
+        <Link href="/" className={styles.voltar}>← Voltar ao catálogo</Link>
       </main>
     );
   }
 
   return (
-    <main>
-      <Link href="/">← Voltar ao catálogo</Link>
-
-      <img src={produto.imagem} alt={produto.nome} width={400} height={300} />
-
-      <div>
-        <span>{produto.categoria}</span>
-        <h1>{produto.nome}</h1>
-        <p>⭐ {produto.avaliacao} / 5</p>
-        <p>{produto.descricao}</p>
-        <strong>R$ {produto.preco.toFixed(2)}</strong>
-        <p>Estoque: {produto.estoque} unidades</p>
+    <main className={styles.container}>
+      <Link href="/" className={styles.voltar}>← Voltar ao catálogo</Link>
+      <div className={styles.conteudo}>
+        <img
+          className={styles.imagem}
+          src={produto.imagem}
+          alt={produto.nome}
+          width={450}
+          height={450}
+        />
+        <div className={styles.info}>
+          <span className={styles.categoria}>{produto.categoria}</span>
+          <h1 className={styles.nome}>{produto.nome}</h1>
+          <p className={styles.avaliacao}>⭐ {produto.avaliacao} / 5</p>
+          <p className={styles.descricao}>{produto.descricao}</p>
+          <strong className={styles.preco}>R$ {produto.preco.toFixed(2)}</strong>
+          <p className={styles.estoque}>Estoque: {produto.estoque} unidades</p>
+          <button className={styles.botao}>🛒 Adicionar ao carrinho</button>
+        </div>
       </div>
-
-      <button>🛒 Adicionar ao carrinho</button>
     </main>
   );
 }
