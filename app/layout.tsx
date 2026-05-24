@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
 export const metadata: Metadata = {
   title: "Catálogo Interativo",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body style={{ margin: 0, backgroundColor: "#0f3460", minHeight: "100vh" }}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
